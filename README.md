@@ -1,4 +1,6 @@
-> 本程序是基于vs2012，PCL lib开发，运行前需要安装以下依赖库：
+北京大学信科研究生院3DVIP 大作业
+
+本程序是基于vs2012，PCL lib开发，运行前需要安装以下依赖库：
 #
 	pcl_common_debug.lib
     pcl_features_debug.lib
@@ -188,13 +190,9 @@
 
 打开程序：
 #
-双击
-#
-	ipcgz.sln
+双击  `ipcgz.sln`
 
-设置好导入文件的路径，在运行
-#
-	icp.cpp
+设置好导入文件的路径，在运行`icp.cpp`
 即可
 
 程序内已加入显示效果的代码，可以通过鼠标拖拽进行查看。
@@ -202,8 +200,11 @@
 
 
 ##
-#
-#
+
+一些中间结果的下载：
+
+[http://pan.baidu.com/s/1nuEKWFf](http://pan.baidu.com/s/1nuEKWFf)
+##
 Reposiry from Qijie Zhao's git ：
 
 [https://github.com/qijiezhao/ICP-3D-Reconstruction](https://github.com/qijiezhao/ICP-3D-Reconstruction "ICP-3D-Reconstruction")
