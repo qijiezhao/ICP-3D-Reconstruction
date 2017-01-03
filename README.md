@@ -1,2 +1,209 @@
-# ICP-3D-Reconstruction
-bigwork of our 3dvip course
+> 本程序是基于vs2012，PCL lib开发，运行前需要安装以下依赖库：
+#
+	pcl_common_debug.lib
+    pcl_features_debug.lib
+    pcl_filters_debug.lib
+    pcl_io_debug.lib
+    pcl_io_ply_debug.lib
+    pcl_kdtree_debug.lib
+    pcl_keypoints_debug.lib
+    pcl_ml_debug.lib
+    pcl_octree_debug.lib
+    pcl_outofcore_debug.lib
+    pcl_people_debug.lib
+    pcl_recognition_debug.lib
+    pcl_registration_debug.lib
+    pcl_sample_consensus_debug.lib
+    pcl_search_debug.lib
+    pcl_segmentation_debug.lib
+    pcl_stereo_debug.lib
+    pcl_surface_debug.lib
+    pcl_tracking_debug.lib
+    pcl_visualization_debug.lib
+    libboost_atomic-vc110-mt-1_55.lib
+    libboost_atomic-vc110-mt-gd-1_55.lib
+    libboost_chrono-vc110-mt-1_55.lib
+    libboost_chrono-vc110-mt-gd-1_55.lib
+    libboost_context-vc110-mt-1_55.lib
+    libboost_context-vc110-mt-gd-1_55.lib
+    libboost_coroutine-vc110-mt-1_55.lib
+    libboost_coroutine-vc110-mt-gd-1_55.lib
+    libboost_date_time-vc110-mt-1_55.lib
+    libboost_date_time-vc110-mt-gd-1_55.lib
+    libboost_exception-vc110-mt-1_55.lib
+    libboost_exception-vc110-mt-gd-1_55.lib
+    libboost_filesystem-vc110-mt-1_55.lib
+    libboost_filesystem-vc110-mt-gd-1_55.lib
+    libboost_graph_parallel-vc110-mt-1_55.lib
+    libboost_graph_parallel-vc110-mt-gd-1_55.lib
+    libboost_graph-vc110-mt-1_55.lib
+    libboost_graph-vc110-mt-gd-1_55.lib
+    libboost_iostreams-vc110-mt-1_55.lib
+    libboost_iostreams-vc110-mt-gd-1_55.lib
+    libboost_locale-vc110-mt-1_55.lib
+    libboost_locale-vc110-mt-gd-1_55.lib
+    libboost_log_setup-vc110-mt-1_55.lib
+    libboost_log_setup-vc110-mt-gd-1_55.lib
+    libboost_log-vc110-mt-1_55.lib
+    libboost_log-vc110-mt-gd-1_55.lib
+    libboost_math_c99-vc110-mt-1_55.lib
+    libboost_math_c99-vc110-mt-gd-1_55.lib
+    libboost_math_c99f-vc110-mt-1_55.lib
+    libboost_math_c99f-vc110-mt-gd-1_55.lib
+    libboost_math_c99l-vc110-mt-1_55.lib
+    libboost_math_c99l-vc110-mt-gd-1_55.lib
+    libboost_math_tr1-vc110-mt-1_55.lib
+    libboost_math_tr1-vc110-mt-gd-1_55.lib
+    libboost_math_tr1f-vc110-mt-1_55.lib
+    libboost_math_tr1f-vc110-mt-gd-1_55.lib
+    libboost_math_tr1l-vc110-mt-1_55.lib
+    libboost_math_tr1l-vc110-mt-gd-1_55.lib
+    libboost_mpi-vc110-mt-1_55.lib
+    libboost_mpi-vc110-mt-gd-1_55.lib
+    libboost_prg_exec_monitor-vc110-mt-1_55.lib
+    libboost_prg_exec_monitor-vc110-mt-gd-1_55.lib
+    libboost_program_options-vc110-mt-1_55.lib
+    libboost_program_options-vc110-mt-gd-1_55.lib
+    libboost_random-vc110-mt-1_55.lib
+    libboost_random-vc110-mt-gd-1_55.lib
+    libboost_regex-vc110-mt-1_55.lib
+    libboost_regex-vc110-mt-gd-1_55.lib
+    libboost_serialization-vc110-mt-1_55.lib
+    libboost_serialization-vc110-mt-gd-1_55.lib
+    libboost_signals-vc110-mt-1_55.lib
+    libboost_signals-vc110-mt-gd-1_55.lib
+    libboost_system-vc110-mt-gd-1_55.lib
+    libboost_test_exec_monitor-vc110-mt-1_55.lib
+    libboost_test_exec_monitor-vc110-mt-gd-1_55.lib
+    libboost_thread-vc110-mt-gd-1_55.lib
+    libboost_timer-vc110-mt-1_55.lib
+    libboost_timer-vc110-mt-gd-1_55.lib
+    libboost_unit_test_framework-vc110-mt-1_55.lib
+    libboost_unit_test_framework-vc110-mt-gd-1_55.lib
+    libboost_wave-vc110-mt-1_55.lib
+    libboost_wave-vc110-mt-gd-1_55.lib
+    libboost_wserialization-vc110-mt-1_55.lib
+    libboost_wserialization-vc110-mt-gd-1_55.lib
+    flann.lib
+    flann_cpp_s.lib
+    flann_cpp_s-gd.lib
+    flann_s.lib
+    flann_s-gd.lib
+    flann-gd.lib
+    qhull.lib
+    qhull_d.lib
+    qhull_p.lib
+    qhull_p_d.lib
+    qhullcpp.lib
+    qhullcpp_d.lib
+    qhullstatic.lib
+    qhullstatic_d.lib
+    qhullstatic_p.lib
+    qhullstatic_p_d.lib
+    vtkalglib.lib
+    vtkalglib-gd.lib
+    vtkCharts.lib
+    vtkCharts-gd.lib
+    vtkCommon.lib
+    vtkCommon-gd.lib
+    vtkDICOMParser.lib
+    vtkDICOMParser-gd.lib
+    vtkexoIIc.lib
+    vtkexoIIc-gd.lib
+    vtkexpat.lib
+    vtkexpat-gd.lib
+    vtkFiltering.lib
+    vtkFiltering-gd.lib
+    vtkfreetype.lib
+    vtkfreetype-gd.lib
+    vtkftgl.lib
+    vtkftgl-gd.lib
+    vtkGenericFiltering.lib
+    vtkGenericFiltering-gd.lib
+    vtkGeovis.lib
+    vtkGeovis-gd.lib
+    vtkGraphics.lib
+    vtkGraphics-gd.lib
+    vtkhdf5.lib
+    vtkhdf5_hl.lib
+    vtkhdf5_hl-gd.lib
+    vtkhdf5-gd.lib
+    vtkHybrid.lib
+    vtkHybrid-gd.lib
+    vtkImaging.lib
+    vtkImaging-gd.lib
+    vtkInfovis.lib
+    vtkInfovis-gd.lib
+    vtkIO.lib
+    vtkIO-gd.lib
+    vtkjpeg.lib
+    vtkjpeg-gd.lib
+    vtklibxml2.lib
+    vtklibxml2-gd.lib
+    vtkmetaio.lib
+    vtkmetaio-gd.lib
+    vtkNetCDF.lib
+    vtkNetCDF_cxx.lib
+    vtkNetCDF_cxx-gd.lib
+    vtkNetCDF-gd.lib
+    vtkpng.lib
+    vtkpng-gd.lib
+    vtkproj4.lib
+    vtkproj4-gd.lib
+    vtkRendering.lib
+    vtkRendering-gd.lib
+    vtksqlite.lib
+    vtksqlite-gd.lib
+    vtksys.lib
+    vtksys-gd.lib
+    vtktiff.lib
+    vtktiff-gd.lib
+    vtkverdict.lib
+    vtkverdict-gd.lib
+    vtkViews-gd.lib
+    vtkViews.lib
+    vtkVolumeRendering.lib
+    vtkVolumeRendering-gd.lib
+    vtkWidgets.lib
+    vtkWidgets-gd.lib
+    vtkzlib.lib
+    vtkzlib-gd.lib
+    kernel32.lib
+    user32.lib
+    gdi32.lib
+    winspool.lib
+    comdlg32.lib
+    advapi32.lib
+    shell32.lib
+    ole32.lib
+    oleaut32.lib
+    uuid.lib
+    odbc32.lib
+    odbccp32.lib* #
+
+另外需要设置环境变量：
+
+# 
+	PATH+=‘;D:\PCL1.7.2\bin;D:\PCL1.7.2\3rdParty\FLANN\bin;D:\PCL1.7.2\3rdParty\VTK\bin;D:\PCL1.7.2\3rdParty\QHull\bin’
+
+打开程序：
+#
+双击
+#
+	ipcgz.sln
+
+设置好导入文件的路径，在运行
+#
+	icp.cpp
+即可
+
+程序内已加入显示效果的代码，可以通过鼠标拖拽进行查看。
+
+
+
+##
+#
+#
+Reposiry from Qijie Zhao's git ：
+
+[https://github.com/qijiezhao/ICP-3D-Reconstruction](https://github.com/qijiezhao/ICP-3D-Reconstruction "ICP-3D-Reconstruction")
